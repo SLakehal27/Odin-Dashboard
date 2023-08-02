@@ -1,0 +1,41 @@
+
+body{
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 5fr 5fr 5fr 5fr
+}
+
+.sidebar{
+    background-color: #38bdf8;
+    grid-column: 1;
+    grid-row:1/5;
+}
+
+.sidebar .logo{
+    color:white;
+    font-size: 24px;
+    justify-self:start;
+}
+
+.header
+{
+    background: white;
+    box-shadow: 2px 2px 15px #9ca3af;
+    grid-row: 1/2;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    align-items: center;
+    gap:15px;
+}
+
+.projects{
+    background: #e2e8f0;
+    grid-row: 2/5;
+    z-index: -1;
+}
