@@ -1,15 +1,28 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+
+:root{
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: Roboto;
+}
 body{
     margin: 0;
 }
+
+/* -- Main page --  */
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 5fr 5fr 5fr 5fr
+    grid-template-rows: 5fr 5fr 5fr 5fr;
+    height: 100vh;
 }
 
+/* -- Sidebar --  */
 .sidebar{
     background-color: #38bdf8;
+    display: grid;
+    grid-template-rows: 72px 1fr 2fr;
     grid-column: 1;
     grid-row:1/5;
 }
@@ -18,8 +31,43 @@ body{
     color:white;
     font-size: 24px;
     justify-self:start;
+    padding-left: 5vh;
+    font-weight: bold;
 }
 
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+}
+.mainoptions img{
+    height: 25px;
+    padding-right: 10px;
+}
+
+.mainoptions ul {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.mainoptions li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.mainoptions a{
+    color:white;
+    text-decoration: none;
+}
+
+
+/* -- Header -- */
 .header
 {
     background: white;
@@ -34,6 +82,7 @@ body{
     gap:15px;
 }
 
+/* -- Main content -- */
 .projects{
     background: #e2e8f0;
     grid-row: 2/5;
