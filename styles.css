@@ -26,7 +26,7 @@ body{
     grid-column: 1;
     grid-row:1/5;
     padding-right:4vw;
-    height: 150vh;
+    height: 200vh;
 }
 
 .sidebar .logo{
@@ -208,7 +208,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 50px;    
+    gap: 35px;    
 }
 
 .currentprojects .projectelem{
@@ -222,6 +222,7 @@ body{
     padding-left: 2vh;
     padding-right: 2vh;
     transform: 1s;
+    height: 18rem;
 }
 
 
@@ -248,8 +249,62 @@ body{
 
 .announcements{
     margin-left: 2vw;
+    grid-row: 1/2;
+}
+
+.announcementbox{
+    background: white;
+    border-radius: 25px;
+    text-align:center;
+    padding: 1vh 0 1vh 0;
+    margin-right: 25px;
+    box-shadow: 5px 5px 5px #9ca3af;
+}
+
+.announcementbox hr{
+    width: 60%;
+}
+
+.announcementbox p{
+    color: #9ca3af;
 }
 
 .trending{
     margin-left: 2vw;
+    align-items: center;
+    grid-row: 2/4;
+    margin-top: -9vh;
+}
+
+.trendingprofiles{
+    background: white;
+    border-radius: 25px;
+    margin-right: 25px;
+    box-shadow: 5px 5px 5px #9ca3af;
+}
+
+.trendingprofiles ul{
+    list-style: none;
+}
+
+.trendingprofiles img{
+    height:35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.trendingprofiles li
+{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding-top: 20px;
+    padding-bottom: 6vh;
+}
+
+.trendingtxt p{
+    margin:0;
+}
+.trendingtxt p:last-child{
+    color:#9ca3af;
 }
