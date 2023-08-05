@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
 
-:root{
-    overflow: hidden;
+:root
+{
     min-height: 100vh;
     font-family: Roboto;
 }
@@ -13,18 +13,20 @@ body{
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 5fr 5fr 5fr 5fr;
+    grid-template-rows: 5fr 5fr 15fr 5fr;
     height: 100vh;
 }
 
 /* -- Sidebar --  */
+
 .sidebar{
-    background-color: #38bdf8;
+    background-color: #5eead4;
     display: grid;
-    grid-template-rows: 72px 1fr 2fr;
+    grid-template-rows: 72px 0.5fr 2fr;
     grid-column: 1;
     grid-row:1/5;
     padding-right:4vw;
+    height: 150vh;
 }
 
 .sidebar .logo{
@@ -59,6 +61,7 @@ body{
     list-style-type: none;
     display: flex;
     align-items: center;
+    
 }
 
 .mainoptions a{
@@ -73,13 +76,14 @@ body{
     background: white;
     box-shadow: 2px 2px 15px #9ca3af;
     grid-row: 1/2;
+    z-index: 2;
 }
 
 .search{
     display: grid;
     grid-template-columns: 1fr 1fr; 
     align-items: center;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .searchelem > .searchbar{
@@ -124,20 +128,21 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 3vw;
-    margin-top:10px;
     align-items: center;
     gap:25px;
+    margin-top: 2vh;
 }
 
 .profile{
     display: grid;
-    grid-template-columns: 180px 180px 300px;
+    grid-template-columns: 100px 300px;
     gap:15px;
+    position: relative;
 }
 
 .profiletxt{
     display: grid;
-    grid-template-rows: 10px 2fr;
+    grid-template-rows: 20px 2fr;
 }
 .profiletxt p{
     font-weight: bold;
@@ -165,17 +170,86 @@ body{
     background: #38bdf8;
     height: 35px;
     width: 100px;
+    transition: 0.7s;
 }
 
 .profilebtns{
     display: flex;
     gap:25px;
     justify-content: flex-end;
+    position: absolute;
+    padding-right: 4vw;
+    right: 0;
+}
+
+.profileoptions button:hover{
+    background-color: #075985;
+    transition: 1s;
 }
 
 /* -- Main content -- */
-.projects{
+.projects
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     background: #e2e8f0;
     grid-row: 2/5;
-    z-index: -1;
+    z-index: 1;
+    padding-left: 3vw;
+}
+
+.projectgrid
+{
+    grid-row: 1/3;
+}
+
+.currentprojects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;    
+}
+
+.currentprojects .projectelem{
+    box-shadow: 5px 5px 5px #9ca3af, -5px 0px #fcd34d;
+}
+
+
+.projectelem{
+    background: white;
+    border-radius: 15px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    transform: 1s;
+}
+
+
+.projectelem img{
+    height: 25px;
+}
+
+.projectelem p{
+    font-size: 12px;
+}
+
+.projectelem:hover{
+    color: #075985;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.projectimg{
+    display: flex;
+    justify-content: flex-end;
+    gap:10px;
+    padding-right:1vw;
+}
+
+.announcements{
+    margin-left: 2vw;
+}
+
+.trending{
+    margin-left: 2vw;
 }
