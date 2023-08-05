@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
 
 :root{
@@ -25,6 +24,7 @@ body{
     grid-template-rows: 72px 1fr 2fr;
     grid-column: 1;
     grid-row:1/5;
+    padding-right:4vw;
 }
 
 .sidebar .logo{
@@ -77,9 +77,100 @@ body{
 
 .search{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    padding-top: 10px;
+}
+
+.searchelem > .searchbar{
+    width: 45vw;
+}
+
+.searchelem{
+    display: flex;
+    padding-left: 3vw;
     align-items: center;
     gap:15px;
+}
+
+.searchelem input{
+    border: none;
+    background: #cbd5e1;
+    border-radius: 25px;
+    height: 25px;
+}
+
+.profiledata{
+    display: grid;
+    grid-template-columns: 25px 25px 1fr;
+    justify-self: end;
+    padding-right: 7vw;
+    align-items: center;
+    gap:35px;
+}
+
+.profiledata p {
+    font-weight: bold;
+}
+
+.profiledata img:last-of-type
+{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.profileoptions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 3vw;
+    margin-top:10px;
+    align-items: center;
+    gap:25px;
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 180px 180px 300px;
+    gap:15px;
+}
+
+.profiletxt{
+    display: grid;
+    grid-template-rows: 10px 2fr;
+}
+.profiletxt p{
+    font-weight: bold;
+}
+.profiletxt p:first-child{
+    font-size: 16px;
+}
+
+.profiletxt p:last-child{
+    font-size: 24px;
+    width: 25vw;
+}
+
+.profileoptions img
+{
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.profileoptions button{
+    border: none;
+    border-radius: 25px;
+    color:white;
+    background: #38bdf8;
+    height: 35px;
+    width: 100px;
+}
+
+.profilebtns{
+    display: flex;
+    gap:25px;
+    justify-content: flex-end;
 }
 
 /* -- Main content -- */
